@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.4.1] - 2026-08-01
+
+### Added
+
+- `README.md` عربي شامل (18KB) يغطي: ما يعمل، المتطلبات، البدء السريع، Flutter، DB، Feature Flags، Docker، Railway، Worker، التكاملات، الوثائق، البنية، الأمان، نتائج التحقق، مكتبة الوكلاء، القيود، الرخصة.
+- `Dockerfile` متعدد المراحل (deps → build → runner) مع healthcheck و non-root user.
+- `.dockerignore` و `.npmrc` و `LICENSE` (MIT).
+- `public/favicon.svg` و `public/robots.txt` و `public/site.webmanifest`.
+- `e2e/health.smoke.test.ts` — smoke test لـ health/ready/openapi.
+- `apps/mobile/assets/fonts/README.md` — دليل تحميل خطوط Noto Sans Arabic.
+- `src/worker/index.ts` — منفّذ Worker مستقل مع handlers لكل أنواع المهام.
+- 7 وثائق جديدة: `docs/ARCHITECTURE.md`, `docs/API.md`, `docs/AUTHENTICATION.md`, `docs/DEPLOYMENT.md`, `docs/TROUBLESHOOTING.md`, `docs/DELIVERY_REPORT.md`, `docs/ANDROID_RELEASE.md`.
+
+### Changed
+
+- `package.json` version bumped to 1.4.1.
+
 ## [1.4.0] - 2026-07-31
 
 ### Added

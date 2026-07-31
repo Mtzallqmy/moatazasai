@@ -1,0 +1,12 @@
+node_modules
+.next
+.git
+.env
+.env*.local
+*.log
+apps/mobile/.dart_tool
+apps/mobile/build
+coverage
+test-results
+playwright-report
+drizzle/meta

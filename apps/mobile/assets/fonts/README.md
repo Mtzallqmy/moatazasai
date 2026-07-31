@@ -1,14 +1,19 @@
-# خطوط تطبيق معتز AI
+# خطوط Noto Sans Arabic
 
-ضع هنا الملفات التالية (متاحة مجانًا من Google Fonts):
+تنزّل خطوط Noto Sans Arabic من:
+
+https://fonts.google.com/noto/specimen/Noto+Sans+Arabic
+
+ضع الملفات التالية في هذا المجلد:
 
 - `NotoSansArabic-Regular.ttf`
+- `NotoSansArabic-Medium.ttf`
 - `NotoSansArabic-Bold.ttf`
-- `NotoKufiArabic-Regular.ttf`
 
-أو حمّلها من: https://fonts.google.com/noto/specimen/Noto+Sans+Arabic
+ثم نفّذ:
 
 ```bash
-mkdir -p apps/mobile/assets/fonts
-# حمل الملفات إلى هذا المجلد
+flutter pub get
 ```
+
+`pubspec.yaml` يشير إلى هذه الملفات تحت `fonts:`. بدونها، يتم استخدام خط النظام.

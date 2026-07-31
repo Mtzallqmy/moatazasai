@@ -1,6 +1,6 @@
 {
   "name": "moataz-agent-platform",
-  "version": "1.3.0",
+  "version": "1.4.1",
   "private": true,
   "type": "module",
   "description": "منصة معتز للوكلاء الذكيين — SaaS عربية متعددة المؤسسات لبناء وتشغيل وكلاء ذكاء اصطناعي",

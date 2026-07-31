@@ -1,14 +1,1 @@
-{
-  "extends": "next/core-web-vitals",
-  "rules": {
-    "no-console": [
-      "error",
-      {
-        "allow": [
-          "warn",
-          "error"
-        ]
-      }
-    ]
-  }
-}
+{"extends":"next/core-web-vitals","rules":{"@next/next/no-html-link-for-pages":"off","no-console":["error",{"allow":["warn","error","info"]}]}}
