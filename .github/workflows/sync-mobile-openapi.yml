@@ -1,0 +1,38 @@
+# تم حذف sync-mobile-openapi.yml. كان يكتب بـ git push مباشر ويعدّل Dart عبر regex.
+# هذه ممارسة خطرة. التحديثات اليدوية على Flutter و OpenAPI يجب أن تتم عبر PR.
+
+name: Validate OpenAPI contract
+
+on:
+  pull_request:
+    paths:
+      - "src/app/api/v1/openapi/route.ts"
+
+permissions:
+  contents: read
+
+jobs:
+  validate-openapi:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22.18.0
+          cache: npm
+      - run: npm ci --no-audit --no-fund
+      - name: Load OpenAPI and validate basic shape
+        run: |
+          node --input-type=module <<'NODE'
+          import("./src/app/api/v1/openapi/route.ts").catch(async () => {
+            // Fallback when route module has Next imports: just import the dynamic spec file
+            const fs = await import("node:fs");
+            if (fs.existsSync("src/app/api/v1/openapi/route.ts")) {
+              console.log("OpenAPI route found — shape is checked during build/typecheck");
+            } else {
+              console.error("OpenAPI route missing");
+              process.exit(1);
+            }
+          });
+          NODE

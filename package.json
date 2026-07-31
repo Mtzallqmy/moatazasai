@@ -1,0 +1,53 @@
+{
+  "name": "moataz-agent-platform",
+  "version": "1.3.0",
+  "private": true,
+  "type": "module",
+  "description": "منصة معتز للوكلاء الذكيين — SaaS عربية متعددة المؤسسات لبناء وتشغيل وكلاء ذكاء اصطناعي",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.11"
+  },
+  "scripts": {
+    "dev": "next dev -p 3000",
+    "build": "next build",
+    "start": "next start -p 3000 -H 0.0.0.0",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test --import tsx tests/**/*.test.ts",
+    "test:e2e": "node --test --import tsx e2e/**/*.test.ts",
+    "test:integration": "node --test --import tsx tests/integration/**/*.test.ts",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "tsx scripts/migrate.ts",
+    "db:migrate:all": "tsx scripts/migrate-all.ts",
+    "db:studio": "drizzle-kit studio",
+    "worker": "tsx src/worker/index.ts",
+    "cf:build": "opennextjs-cloudflare build"
+  },
+  "dependencies": {
+    "@ai-sdk/anthropic": "1.0.6",
+    "@ai-sdk/google": "1.0.13",
+    "@ai-sdk/openai": "1.0.11",
+    "@anthropic-ai/sdk": "^0.115.0",
+    "@modelcontextprotocol/sdk": "1.0.4",
+    "ai": "4.0.32",
+    "drizzle-orm": "0.38.3",
+    "fflate": "0.8.2",
+    "next": "~15.1.8",
+    "openai": "^7.3.0",
+    "postgres": "3.4.5",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "tsx": "4.19.2",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "22.10.5",
+    "@types/react": "19.0.3",
+    "@types/react-dom": "19.0.2",
+    "drizzle-kit": "0.30.1",
+    "eslint": "9.18.0",
+    "eslint-config-next": "15.1.6",
+    "typescript": "5.7.3"
+  }
+}

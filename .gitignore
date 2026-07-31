@@ -1,0 +1,47 @@
+# dependencies
+node_modules/
+.npm-cache/
+
+# next.js
+.next/
+out/
+.vercel/
+.next-on-pages/
+.open-next/
+
+# env
+.env
+.env*.local
+
+# testing
+coverage/
+test-results/
+playwright-report/
+
+# misc
+.DS_Store
+*.log
+npm-debug.log*
+tsconfig.tsbuildinfo
+
+# local workspace metadata
+.openai/
+.sites-runtime/
+
+# flutter
+apps/mobile/.dart_tool/
+apps/mobile/.flutter-plugins*
+apps/mobile/build/
+apps/mobile/android/local.properties
+apps/mobile/android/key.properties
+*.jks
+*.keystore
+apps/mobile/.flutter-plugins
+apps/mobile/.flutter-plugins-dependencies
+
+# drizzle
+drizzle/meta/
+
+# Keep these OUT of git:
+# - package-lock.json is OK to commit (deterministic installs)
+# - .env.example is OK to commit (no secrets)
