@@ -30,7 +30,7 @@
     "@ai-sdk/openai": "1.0.11",
     "@anthropic-ai/sdk": "^0.115.0",
     "@modelcontextprotocol/sdk": "1.0.4",
-    "ai": "4.0.32",
+    "ai": "7.0.41",
     "drizzle-orm": "0.38.3",
     "fflate": "0.8.2",
     "next": "~15.1.8",
